@@ -5,7 +5,7 @@ const Discord = require('discord.js'),
     config = require('./config.json'),
     fs = require('fs')
 
-client.login(config.token)
+client.login(process.env.TOKEN)
 client.commands = new Discord.Collection()
 const Client = new Discord.Client()
 
@@ -104,4 +104,4 @@ function activity(){
 
 activity(); 
 
-Client.login(config.token)
+Client.login(process.env.TOKEN)
